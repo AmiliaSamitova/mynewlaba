@@ -20,5 +20,5 @@ st.subheader('Графики')
 #гистограмма распределения возрастов
 st.subheader('Распределение возрастов пассажиров')
 fig, ax = plt.subplots()
-sns.histplot(df['Age'].dropna(), bins=30, ax=ax)
+sns.histplot(titanic['Age'].dropna(), bins=30, ax=ax)
 st.pyplot(fig)
