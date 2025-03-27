@@ -19,5 +19,6 @@ st.write(titanic.head(num_rows))
 st.subheader('Графики')
 #гистограмма распределения возрастов
 st.subheader('Распределение возрастов пассажиров')
-sns.histplot(titanic['Age'].dropna(), bins=30) #dropna() удаляет пропуски
-st.pyplot()
+fig, ax = plt.subplots()
+sns.histplot(df['Age'].dropna(), bins=30, ax=ax)
+st.pyplot(fig)
